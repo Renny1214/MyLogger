@@ -1,0 +1,6 @@
+[
+     {
+       "logger.location": "c:\\Logs\\log",
+       "logger.fileType": "txt"
+     }
+]
