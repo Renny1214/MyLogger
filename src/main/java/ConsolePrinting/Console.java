@@ -11,9 +11,11 @@ public class Console {
 
     private BufferedWriter bufferedWriter;
     private StringBuilder stringBuilder;
+    private File file;
 
     public Console() throws IOException{
         bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+        file = new File();
 
     }
     public void consolePrint(Object[] object, String log) throws IOException {
@@ -27,7 +29,7 @@ public class Console {
         {
             stringBuilder.append(object[i]).append(" ");
         }
-        //stringBuilder.append(File.saveData(stringBuilder.toString()));
+        stringBuilder.append(file.saveData(stringBuilder.toString()));
         stringBuilder.append("\n");
 
         bufferedWriter.write(stringBuilder.toString());
